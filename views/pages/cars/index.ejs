@@ -26,10 +26,10 @@
                         <a href="/car/<%= car.id %>" class="btn btn-sm btn-light">
                             <i class="bi bi-eye"></i>
                         </a>
-                        <a href="/edit" class="btn btn-sm btn-light">
+                        <a href="/car/<%= car.id %>/edit" class="btn btn-sm btn-light">
                             <i class="bi bi-pencil-square"></i>
                         </a>
-                        <form method="post" action="/delete">
+                        <form method="post" action="/car/<%= car.id %>/delete" onsubmit="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
                             <button type="submit" class="btn btn-sm btn-light">
                             <i class="bi bi-trash"></i>
                             </button>
