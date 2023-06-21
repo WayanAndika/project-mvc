@@ -5,6 +5,7 @@ const carController=require("../controllers/car.controller");
 const router=Router();
 
 router.get("/cars",carController.listCars);
+router.get("/car/create",carController.addCar);
 router.get("/car/:id",carController.detailCar);
 
 

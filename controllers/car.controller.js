@@ -14,6 +14,9 @@ class carController{
         })
         res.render("pages/cars/detail",{car:result});
     }
+    static async addCar(req,res){
+        res.render("pages/cars/create");
+    }
 }
 
 module.exports= carController;
