@@ -1,0 +1,21 @@
+<%- include("../../setups/header") %>
+<%- include("../../components/navbar") %>
+<form action="/category" method="post">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan nama kategori" name="name">
+                </div>
+            <div class="col-lg-12">
+                <button type="submit" class="btn btn-primary ">Tambah</button>
+            </div>
+        </div>
+    </div>
+</form>
+
+
+
+
+<%- include("../../setups/footer") %>

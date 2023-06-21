@@ -11,6 +11,7 @@
             <th scope="col">Merek</th>
             <th scope="col">Tersedia</th>
             <th scope="col">Harga</th>
+            <th scope="col">Kategori</th>
             <th scope="col">Aksi</th>
             </tr>
         </thead>
@@ -22,6 +23,7 @@
                     <td><%= car.merk %></td>
                     <td><%= car.available ?"Tersedia":"Tidak Tersedia" %></td>
                     <td>Rp. <%= car.price %>/Hari</td>
+                    <td><%= car.category.name %></td>
                     <td class="d-flex gap-2 justify-content-center">
                         <a href="/car/<%= car.id %>" class="btn btn-sm btn-light">
                             <i class="bi bi-eye"></i>
