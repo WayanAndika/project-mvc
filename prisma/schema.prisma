@@ -6,20 +6,19 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
+  provider = "sqlite"
+  url      = "file:../db/dev.db"
 }
 
 model Car {
-  id         Int      @id @default(autoincrement())
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  name       String
-  merk       String
-  qty        Int
-  available  Boolean
-  desc       String
-  price      Int
-  img        String
-  categoryId Int
+  id        Int      @id @default(autoincrement())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  name      String
+  merk      String
+  qty       Int
+  available Boolean
+  desc      String
+  price     Int
+  img       String
 }

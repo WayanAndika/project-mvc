@@ -13,6 +13,6 @@ router.use(carRouter);
 
 // ketika user mengetik link asal maka akan tampil page 404
 router.use((req, res, next) => {
-    res.status(404).render("pages/404")
-  });
+  res.status(404).render("pages/404")
+});
 module.exports=router;

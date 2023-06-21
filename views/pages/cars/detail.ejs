@@ -1,0 +1,25 @@
+<%- include("../../setups/header") %>
+<%- include("../../components/navbar") %>
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <img src="https://example.com/path/to/car-image.jpg" class="img-fluid" alt="Gambar Mobil">
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= car.name %></h5>
+            <p class="card-text"><%= car.desc %></p>
+            <ul class="list-group">
+              <li class="list-group-item"><strong>Merk:</strong> <%= car.merk %></li>
+              <li class="list-group-item"><strong>Jumlah:</strong> <%= car.qty %></li>
+              <li class="list-group-item"><strong>Tersedia:</strong> <%= car.available ?"Tersedia":"Tidak Tersedia" %></li>
+              <li class="list-group-item"><strong>Harga:</strong> Rp. <%= car.price %></li>
+            </ul>
+            <a href="/cars" class="btn btn-primary">Kembali</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%- include("../../setups/footer") %>
