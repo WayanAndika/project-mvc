@@ -17,6 +17,20 @@ class carController{
     static async addCar(req,res){
         res.render("pages/cars/create");
     }
+    static async storeCar(req,res){
+        await prisma.car.create({
+            data:{
+                name:req.body.name,
+                merk:req.body.merk,
+                qty:Number(req.body.qty),
+                desc:req.body.desc,
+                price:Number(req.body.price),
+                img : req.body.img,
+                available:req.body.available === "1" ? true : false
+            }
+        });
+        res.redirect("/cars");
+    }
 }
 
 module.exports= carController;
